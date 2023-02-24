@@ -1,0 +1,570 @@
+$color-principal :rgb(6, 6, 6);
+$titulos: rgb(255, 255, 0);
+$parrafos: rgb(237, 237, 237);
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  cursor: default;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: $color-principal;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.reveal{
+  position: relative;
+  transform: translateX(30px);
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+}
+
+.reveal.active{
+  transform: translateX(0vw);
+  opacity: 1;
+  transition: all .5s ease;
+  -webkit-transform: translateY(0vw);
+  -moz-transform: translateY(0vw);
+  -ms-transform: translateY(0vw);
+  -o-transform: translateY(0vw);
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}
+
+
+
+//menu de navegacion
+
+.nav{
+  background-color: $color-principal;
+  position: absolute;
+  position: fixed;
+  z-index: 9;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 10vh;
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+
+  .mobile-menu{
+    display: none;
+  }
+
+    .redes{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      
+
+        .redes-so{
+
+            img{
+              width: 22px;
+              filter: invert(99%) sepia(95%) saturate(19%) hue-rotate(163deg) brightness(104%) contrast(100%);
+              cursor: pointer;
+            }
+        }
+    }
+
+    .logo{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+        img{
+          width: 40px;
+        }
+    }
+
+    .menu{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      
+      a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $parrafos;
+        cursor: pointer;
+          
+          span{
+            color: $titulos;
+          }
+       }
+    }
+
+    @media (max-width: 650px){
+      .logo, .menu, .redes{
+        display: none;
+      }
+
+      .mobile-menu{
+        width: 80vw;
+        height: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+
+        img{
+          width: 35px;
+        }
+      }
+   }
+
+   @media (max-width: 900px){
+      .redes{
+        display: none;
+      }
+
+      .menu{
+        width: 120%;
+      }
+   }
+}
+
+
+.section-one{
+  background-image:linear-gradient(
+    0deg, rgba(0,0,0,0.75),  rgba(0,0,0,0.75)
+) ,url(../img/fondo2.jpg);
+  clip-path: polygon(52% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+  background-position: center center;
+  background-size:cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  
+
+
+    .parra-uno{
+      width: 60%;
+      color: $titulos;
+      font-size: 3rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    .parra-dos{
+      width: 60%;
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .boton{
+      width: 140px;
+      height: 50px;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+
+    }
+    
+    .boton:hover{
+      background-color: $titulos;
+      color:$color-principal;
+      transition: all .5s;
+      cursor: pointer;
+    }
+
+    @media (max-width: 500px){
+      background-image:linear-gradient(
+        0deg, rgba(0,0,0,0.75),  rgba(0,0,0,0.75)
+    ) ,url(../img/what.jpg);
+       clip-path: none;
+    }
+}
+
+//---------------------------------------------------
+
+
+// seccion dos
+
+.section-two{
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  padding: 80px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   gap: 50px;
+
+    span{
+      width: 80%;
+      font-weight: 600;
+      color: $parrafos;
+    }
+
+    .h2{
+      font-size: 2.5em;
+      font-weight: 600;
+      color: $parrafos;
+
+        span{
+          color:$titulos;
+        }
+    }
+
+    .cards{
+      margin-top: 30px;
+      width: 85%;
+      display: grid;
+      place-items: center;
+      gap: 5rem;
+      grid-auto-rows: 15rem;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      
+
+
+        .card{
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+            h2{
+              color: $titulos;
+            }
+
+            p{
+              text-align: center;
+              font-weight: 600;
+              color: white;
+            }
+
+            div img{
+              width: 60px;
+            }
+        }
+    }
+}
+
+
+//--------------------------------------------------
+
+
+//seccion tres
+
+
+.section-three{
+  background-image:linear-gradient(
+    0deg, rgba(0,0,0,0.6),  rgba(0,0,0,0.6)
+) ,url(../img/what.jpg);
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  min-height: 30vh;
+  display: grid;
+  grid-template-columns: 35% 35%;
+  justify-content: center;
+
+    span{
+      color: $parrafos;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: auto;
+    }
+
+    div{
+      width: 140px;
+      height: 50px;
+      color:$parrafos;
+      font-size: 1.2rem;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+      left: 20%;
+    }
+
+    div:hover{
+      background-color:$titulos ;
+      color: $color-principal;
+      transition: all .3s;
+    }
+
+    @media (max-width: 500px){
+      grid-template-columns: 40% 40%;
+    }
+
+}
+
+//----------------------------------------------------
+
+
+// seccion cuatro
+
+.section-four{
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 50px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+    h2{
+      font-size: 2.3rem;
+      color: $parrafos;
+
+        span{
+          color:$titulos ;
+        }
+    }
+
+    .cards-precio{
+      margin-top: 30px;
+      width: 80%;
+      display: grid;
+      place-items: center;
+      gap: 5rem;
+      grid-auto-rows: 22rem;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      
+      .card-precio{
+        width: 300px;
+        box-shadow:5px 5px 15px rgba(0, 0, 0, 0.6) ;
+        height: 350px;
+        border:1px solid black;
+        border-radius:10px ;
+        display: grid;
+        align-items: center;
+
+          h2{
+            color: $color-principal;
+          }
+
+          span,div{
+            font-size: 1.3rem;
+            font-weight: 600;
+          }
+
+          div{
+            width: 180px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius:10px ;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        .card-precio:hover{
+          box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+          transform: translateY(-2%);
+          transition: all .3s;
+        }
+
+        .gris{
+          background-color:$parrafos;
+        }
+
+        .rosa{
+          background-color:$titulos;
+          height: 390px;
+        }
+    }
+}
+
+
+
+//-----------------------------------------------------
+
+
+//seccioin cinco
+
+
+.section-five{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#alex-slider {
+  font-family: sans-serif;
+  margin: auto;
+  background-color:$color-principal;
+  max-width: 800px;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#alex-slider>ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#alex-slider>ul.slider {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  height: 300px;
+}
+
+
+
+#alex-slider>ul.slider li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  transition: opacity .5s;
+  background: #fff;
+  background-image:linear-gradient(
+    0deg, rgba(0,0,0,0.6),  rgba(0,0,0,0.6)
+) ,url(../img/what.jpg);
+display: flex;
+flex-direction: column;
+align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+#alex-slider>ul.slider li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#alex-slider>ul.slider li:first-child {
+  opacity: 1;
+  /*Mostramos el primer <li>*/
+}
+
+#alex-slider>ul.slider li:target {
+  opacity: 1;
+  /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+#alex-slider>.menu {
+  text-align: center;
+  margin: 20px;
+}
+
+#alex-slider>.menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+#alex-slider>.menu li a {
+  display: inline-block;
+  color:$color-principal;
+  text-decoration: none;
+  background-color: $titulos;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+  
+}
+
+.a-boton{
+  width: 160px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius:10px ;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.a-boton:hover{
+  background-color: $titulos;
+  transition: all .3s;
+  color: $color-principal;
+}
+
+//--------------------------------------------------------------
+
+
+// footer
+
+.footer{
+  background-color: $titulos;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+    .logo{
+      img{
+        width: 50px;
+        filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(0%) contrast(100%);
+      }
+    }
+
+    span{
+      color:$color-principal;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .redes-footer{
+      display: flex;
+      gap: 5px;
+    }
+}
+
+
+//----------------------------------------------------------------
+
+
