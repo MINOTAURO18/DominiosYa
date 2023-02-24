@@ -78,6 +78,11 @@ body{
               cursor: pointer;
             }
         }
+
+        .redes-so:hover{
+          transform: translateY(-10%);
+          transition: all .3s;
+        }
     }
 
     .logo{
@@ -97,7 +102,7 @@ body{
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       gap: 30px;
       
       a{
@@ -110,6 +115,12 @@ body{
             color: $titulos;
           }
        }
+    }
+
+
+    .menu a:hover{
+      color:$titulos;
+      transition: .3s all;
     }
 
     @media (max-width: 650px){
@@ -200,12 +211,16 @@ body{
       color:$color-principal;
       transition: all .5s;
       cursor: pointer;
+
+    }
+    .boton a:hover{
+      color: black;
     }
 
     @media (max-width: 500px){
       background-image:linear-gradient(
         0deg, rgba(0,0,0,0.75),  rgba(0,0,0,0.75)
-    ) ,url(../img/what.jpg);
+    ) ,url(../img/mobile.jpg);
        clip-path: none;
     }
 }
@@ -292,7 +307,7 @@ body{
   height: auto;
   min-height: 30vh;
   display: grid;
-  grid-template-columns: 35% 35%;
+  grid-template-columns: 45% 45%;
   justify-content: center;
 
     span{
