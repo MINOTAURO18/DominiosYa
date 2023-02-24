@@ -178,7 +178,7 @@ body {
 }
 @media (max-width: 500px) {
   .section-one {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/mobile.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/what.jpg);
     -webkit-clip-path: none;
             clip-path: none;
   }
