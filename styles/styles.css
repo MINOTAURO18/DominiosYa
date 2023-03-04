@@ -182,6 +182,9 @@ body {
     -webkit-clip-path: none;
             clip-path: none;
   }
+  .section-one .parra-dos {
+    display: none;
+  }
 }
 
 .section-two {
